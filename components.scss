@@ -1,0 +1,6 @@
+@each $palette-color-prefix, $palette-color-variables in get-colors-palette($kbd-colors-support-extra-colors-palette, $kbd-colors-support-skip-colors-palette) {
+    .#{$colors-class-prefix}-#{$palette-color-prefix} kbd,
+    kbd.#{$colors-class-prefix}-#{$palette-color-prefix} {
+        @include kbd-colors-propertys(parse-map($kbd-colors-support-parser, $palette-color-variables));
+    }
+}
